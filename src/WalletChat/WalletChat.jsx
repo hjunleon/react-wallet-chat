@@ -4,8 +4,13 @@ import ButtonOverlay from "../ButtonOverlay/ButtonOverlay";
 import styles from "./WalletChat.module.css";
 import { getCookie } from "../utils";
 
-export default function WalletChatWidget({chatAddr, isOpen2}) {
-  const [isOpen, setIsOpen] = useState(isOpen2 != undefined? isOpen2:false);
+export default function WalletChatWidget({chatAddr, isOpen, setIsOpen}) {
+  console.log(`isOpen2: ${isOpen}`)
+  if(isOpen == undefined || setIsOpen == undefined){
+    // const [isOpen, setIsOpen] = useState(isOpen2 != undefined? isOpen2:false);
+    [isOpen, setIsOpen] = useState(false);
+  }
+  
   const [numUnread, setNumUnread] = useState(0);
   // const url = process.env.REACT_APP_APP_URL || "http://localhost:3000"  //"https://app.walletchat.fun/"//"app.walletchat.fun" //http://localhost:3000
   let url = "http://192.168.50.30:3000" || "http://localhost:3000";
@@ -13,7 +18,9 @@ export default function WalletChatWidget({chatAddr, isOpen2}) {
   // if(isOpen2 != undefined)[
   //   setIsOpen(isOpen2)
   // ]
-
+  // useEffect(()=>{
+  //   setIsOpen(isOpen2)
+  // },[isOpen2])
   const clickHandler = (e) => {
     setIsOpen(!isOpen);
   };
