@@ -7,8 +7,9 @@
 ## Install
 
 ```bash
-npm install --save react-wallet-chat
-yarn add react-wallet-chat
+npm install --save react-wallet-chat  (Not published yet)
+yarn add react-wallet-chat  (Not published yet)
+yarn add https://github.com/hjunleon/react-wallet-chat   
 ```
 
 ## Usage
