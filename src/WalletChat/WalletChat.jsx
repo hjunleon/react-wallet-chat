@@ -17,7 +17,7 @@ export default function WalletChatWidget({chatAddr, setChatAddr, isOpen, setIsOp
 
   const [numUnread, setNumUnread] = useState(0);
   // const url = process.env.REACT_APP_APP_URL || "http://localhost:3000"  //"https://app.walletchat.fun/"//"app.walletchat.fun" //http://localhost:3000
-  let url = process.env.REACT_APP_APP_URL || "http://192.168.50.30:3000" || "http://localhost:3000";
+  let url = process.env.REACT_APP_APP_URL || "https://v1.walletchat.fun" // process.env.REACT_APP_APP_URL || "http://192.168.50.30:3000" || "http://localhost:3000";
   console.log(`url: ${url}`);
   // if(isOpen2 != undefined)[
   //   setIsOpen(isOpen2)
